@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anagramer", "Anagramer\Anagramer.csproj", "{6FA115F6-186F-4D4C-BE3F-9EC2D7A4EBCE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6FA115F6-186F-4D4C-BE3F-9EC2D7A4EBCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FA115F6-186F-4D4C-BE3F-9EC2D7A4EBCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FA115F6-186F-4D4C-BE3F-9EC2D7A4EBCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FA115F6-186F-4D4C-BE3F-9EC2D7A4EBCE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0FE68D7C-89ED-47FF-BC66-DCA23E3FF6B5}
+	EndGlobalSection
+EndGlobal

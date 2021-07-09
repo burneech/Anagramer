@@ -1,34 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
+﻿using System.Windows.Controls;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Windows;
 
 namespace Anagramer
 {
     public partial class MainWindow : Window
     {
+        /// <summary>
+        /// Main application window
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void TextBox_KeyDown(object sender, KeyEventArgs e)
+        /// <summary>
+        /// Key press event from main word/character input TextBox
+        /// </summary>
+        /// <param name="sender">Word/character input TextBox</param>
+        /// <param name="e">Key event arguments</param>
+        private void MainInputTextBox_KeyDown(object sender, KeyEventArgs e)
         {
-            TextBox textBox = sender as TextBox;
-            if (textBox != null && textBox.Text.Length > 0 && e.Key == Key.Enter)
+            if (e.Key == Key.Enter && sender is TextBox textBox && textBox.Text.Length > 2)
             {
-                Debug.WriteLine("ENTER");
+                CharacterSourcePanel.Children.Clear();
+                CharacterTargetPanel.Children.Clear();
+
+                foreach (var character in textBox.Text)
+                {
+                    if (character.ToString() == " ")
+                    {
+                        continue;
+                    }
+                    CharacterSourcePanel.Children.Add(new Character(character.ToString()));
+                    CharacterTargetPanel.Children.Add(new Character(" "));
+                }
             }
         }
     }

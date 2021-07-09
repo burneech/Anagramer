@@ -6,19 +6,28 @@
         xmlns:local="clr-namespace:Anagramer"
         xmlns:hc="https://handyorg.github.io/handycontrol"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Background="#1E1E1E">
+        Title="MainWindow" Height="500" Width="900" MinHeight="450" MinWidth="800" Background="#1E1E1E">
     
     <Grid Margin="10" hc:Theme.Skin="Dark">
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*" MinHeight="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*" MinHeight="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*" MinHeight="20"/>
         </Grid.RowDefinitions>
 
-        <hc:TextBox Grid.Row="0" hc:Theme.Skin="Dark" hc:InfoElement.Placeholder="Enter your word(s)" KeyDown="TextBox_KeyDown"
-                    Padding="20" TextAlignment="Center" MaxLength="30" CharacterCasing="Upper" FontWeight="Bold" FontSize="25"/>
+        <!--MAIN WORD/CHARACTERS INPUT TEXTBOX-->
+        <hc:TextBox Grid.Row="0" hc:InfoElement.Placeholder="Enter your word(s)" KeyDown="MainInputTextBox_KeyDown"
+                    Padding="20" TextAlignment="Center" MaxLength="30" CharacterCasing="Upper" FontWeight="Bold" FontSize="35"/>
 
+        <!--CHARACTERS SOURCE PANEL-->
+        <WrapPanel Grid.Row="2" x:Name="CharacterSourcePanel" Margin="1" 
+                   Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+        <!--CHARACTERS TARGET PANEL-->
+        <WrapPanel Grid.Row="4" x:Name="CharacterTargetPanel" Margin="1" 
+                   Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center"/>
     </Grid>
 </Window>

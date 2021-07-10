@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Anagramer"
         xmlns:hc="https://handyorg.github.io/handycontrol"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="900" MinHeight="450" MinWidth="800" Background="#1E1E1E">
+        Title="Anagramer" Height="500" Width="900" MinHeight="450" MinWidth="800" Background="#1E1E1E">
     
     <Grid Margin="10" hc:Theme.Skin="Dark">
         <Grid.RowDefinitions>

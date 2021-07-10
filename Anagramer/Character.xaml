@@ -4,13 +4,12 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Anagramer"
-             xmlns:hc="https://handyorg.github.io/handycontrol"
              mc:Ignorable="d" 
-             d:DesignHeight="100" d:DesignWidth="100">
-    
+             d:DesignHeight="100" d:DesignWidth="100" Background="Transparent" AllowDrop="True" Drop="Character_Drop">
+
     <Border BorderBrush="Gray" BorderThickness="3" CornerRadius="10" Margin="2" Width="65" Height="85">
-        <TextBlock x:Name="TextBox_DisplayedCharacter"
-                    VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White"
-                    FontSize="45" FontWeight="Bold"/>
+        <TextBlock x:Name="TextBox_DisplayedCharacter" 
+                   Foreground="White" FontSize="45" FontWeight="Bold"
+                   VerticalAlignment="Center" HorizontalAlignment="Center"/>
     </Border>
 </UserControl>

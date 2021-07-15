@@ -4,10 +4,32 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>Images\logo.ico</ApplicationIcon>
+    <Authors>Mateo Brnic</Authors>
+    <Company>Mateo Brnic</Company>
+    <Description>A small application showcasing the drag and drop functionality in C#/.NET/WPF.</Description>
+    <PackageProjectUrl>https://github.com/burneech/Anagramer</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/burneech/Anagramer</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="HandyControl" Version="3.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Images\logo.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

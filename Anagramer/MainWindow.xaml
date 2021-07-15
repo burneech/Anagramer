@@ -18,9 +18,12 @@
             <RowDefinition Height="*" MinHeight="20"/>
         </Grid.RowDefinitions>
 
-        <!--MAIN WORD/CHARACTERS INPUT TEXTBOX-->
-        <hc:TextBox Grid.Row="0" hc:InfoElement.Placeholder="Enter your word(s)" KeyDown="MainInputTextBox_KeyDown"
-                    Padding="20" TextAlignment="Center" MaxLength="30" CharacterCasing="Upper" FontWeight="Bold" FontSize="35"/>
+        <!--LOGO AND MAIN WORD/CHARACTERS INPUT TEXTBOX-->
+        <DockPanel Grid.Row="0">
+            <Image Margin="0 0 10 0" Source="pack://application:,,,/Images/logo.png" RenderOptions.BitmapScalingMode="HighQuality"/>
+            <hc:TextBox hc:InfoElement.Placeholder="Enter your word(s)" KeyDown="MainInputTextBox_KeyDown" CaretBrush="Transparent" Background="#2D2D30" BorderThickness="0"
+                        Padding="20" TextAlignment="Center" MaxLength="30" CharacterCasing="Upper" FontWeight="Bold" FontSize="35"/>
+        </DockPanel>
 
         <!--CHARACTERS SOURCE PANEL-->
         <WrapPanel Grid.Row="2" x:Name="CharacterSourcePanel" Margin="1" 

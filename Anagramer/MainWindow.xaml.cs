@@ -1,6 +1,8 @@
 ﻿using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows;
+using System.Diagnostics;
+using System.Windows.Media;
 
 namespace Anagramer
 {
@@ -15,9 +17,9 @@ namespace Anagramer
         }
 
         /// <summary>
-        /// Key press event from main word/character input TextBox
+        /// Key press event from main word/character input textbox
         /// </summary>
-        /// <param name="sender">Word/character input TextBox</param>
+        /// <param name="sender">Word/character input textbox</param>
         /// <param name="e">Key event arguments</param>
         private void MainInputTextBox_KeyDown(object sender, KeyEventArgs e)
         {
@@ -35,6 +37,10 @@ namespace Anagramer
                     CharacterSourcePanel.Children.Add(new Character(character.ToString()));
                     CharacterTargetPanel.Children.Add(new Character(" "));
                 }
+
+                // Removes focus from the textbox
+                FocusManager.SetFocusedElement(FocusManager.GetFocusScope(MainInputTextBox), null);
+                Keyboard.ClearFocus();
             }
         }
     }
